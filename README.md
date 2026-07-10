@@ -2,7 +2,7 @@
 
 Predikce prodejní ceny bytů v Praze na základě lokality, dispozice, stavu a blízkosti občanské vybavenosti. Finální model kombinuje tři gradient boosting algoritmy do ensemble a dosahuje **9.36 % MAPE**.
 
-> **Poznámka k autorství:** Projekt byl oficiálně zadán jako týmová práce v rámci kurzu, ale kompletní pipeline v tomto repozitáři (feature engineering, tuning, ensembling, validace) je moje individuální práce.
+
 
 ## Výsledky
 
@@ -51,5 +51,12 @@ Menší, ale zajímavý vliv mají textové signály přímo z inzerátu (`luxur
 ## Tech stack
 Python · XGBoost · LightGBM · CatBoost · Optuna · scikit-learn
 
----
-*Školní projekt (Aplikovaná matematika, kurz Machine Learning). Cílová metrika: Mean Absolute Percentage Error (MAPE).*
+## Autorství a kontext
+
+Projekt vznikl v rámci kurzu **PřF:M7DataSP – Praktikum z pokročilé datové vědy** (2025), přednášející [Mgr. Petr Šimeček, MSc., Ph.D.](https://is.muni.cz/auth/osoba/244334), na základě course repozitáře [simecek/dspracticum2024](https://github.com/simecek/dspracticum2024) a sdíleného týmového repozitáře [LuciaKajanova/dspracticum25_flowers_team](https://github.com/LuciaKajanova/dspracticum25_flowers_team).
+
+Oficiálně šlo o skupinové zadání (spolupráce s Lucia Kajanová a Eva Kopřiva), kompletní ML pipeline v tomto repozitáři je ale moje individuální práce.
+
+## Licence
+
+MIT — viz [LICENSE](./LICENSE)
