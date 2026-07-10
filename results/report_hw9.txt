@@ -1,0 +1,112 @@
+=====================================================================================
+ FINÁLNÍ REPORT 
+=====================================================================================
+| Strategie | Ø MAPE | Std. Dev. |
+| :--- | :--- | :--- |
+| VOTING (Opt) | 9.392% | 0.477 |
+| STACKING | 9.364% | 0.442 |
+
+=====================================================================================
+ OPTUNA DIAGNOSTIKA: VÍTĚZNÉ PARAMETRY (PRO STABILITU)
+=====================================================================================
+
+ XGBoost Best MAPE: 9.0541%
+
+--- XGBoost Parametry ---
+|                  |   XGBoost Hodnoty |
+|:-----------------|------------------:|
+| learning_rate    |         0.024049  |
+| max_depth        |         6         |
+| subsample        |         0.515716  |
+| colsample_bytree |         0.771487  |
+| reg_alpha        |         0.13957   |
+| reg_lambda       |         0.0381562 |
+
+--- LightGBM Parametry ---
+|                  |   LightGBM Hodnoty |
+|:-----------------|-------------------:|
+| learning_rate    |         0.0268775  |
+| num_leaves       |        52          |
+| subsample        |         0.808992   |
+| colsample_bytree |         0.572209   |
+| reg_alpha        |         0.0345117  |
+| reg_lambda       |         0.00107968 |
+
+--- CatBoost Parametry ---
+|               |   CatBoost Hodnoty |
+|:--------------|-------------------:|
+| learning_rate |          0.0340818 |
+| depth         |          8         |
+| l2_leaf_reg   |          0.0342819 |
+| subsample     |          0.772538  |
+
+## 4. DETAILNÍ VÝSLEDKY VALIDACE (Run by Run)
+|    Run |   STACKING (%) |   VOTING (%) |   XGB_W |   LGBM_W |   CAT_W |   RF_W |
+|-------:|---------------:|-------------:|--------:|---------:|--------:|-------:|
+|  1.000 |          9.341 |        9.303 |   0.395 |    0.333 |   0.271 |  0.000 |
+|  2.000 |          9.437 |        9.475 |   0.497 |    0.307 |   0.195 |  0.000 |
+|  3.000 |          9.138 |        9.062 |   0.148 |    0.232 |   0.620 |  0.000 |
+|  4.000 |          9.363 |        9.448 |   0.340 |    0.367 |   0.293 |  0.000 |
+|  5.000 |          8.844 |        8.857 |   0.501 |    0.319 |   0.180 |  0.000 |
+|  6.000 |         10.226 |       10.343 |   0.340 |    0.331 |   0.329 |  0.000 |
+|  7.000 |          9.405 |        9.418 |   0.362 |    0.339 |   0.299 |  0.000 |
+|  8.000 |         10.008 |       10.043 |   0.353 |    0.319 |   0.328 |  0.000 |
+|  9.000 |          9.167 |        9.307 |   0.345 |    0.332 |   0.324 |  0.000 |
+| 10.000 |          8.708 |        8.666 |   0.358 |    0.311 |   0.332 |  0.000 |
+
+=====================================================================================
+ DETAILNÍ ANALÝZA: CO ROZHODUJE O CENĚ (XGBoost)
+=====================================================================================
+| Feature                     |   Importance |
+|:----------------------------|-------------:|
+| construction_Panelová       |       0.2550 |
+| area                        |       0.1159 |
+| n_rooms                     |       0.0728 |
+| ownership_Družstevní        |       0.0466 |
+| condition_Nový              |       0.0405 |
+| ownership_Osobní            |       0.0260 |
+| txt_luxury                  |       0.0181 |
+| net_area                    |       0.0174 |
+| txt_new                     |       0.0173 |
+| district                    |       0.0155 |
+| condition_Špatný            |       0.0137 |
+| segment_Praha 9_Panelová    |       0.0134 |
+| txt_coop                    |       0.0129 |
+| condition_Před rekonstrukcí |       0.0125 |
+| dist_center                 |       0.0117 |
+| proximity_score             |       0.0117 |
+| balcony_area                |       0.0113 |
+| segment_Praha 1_Cihlová     |       0.0112 |
+| parking                     |       0.0098 |
+| segment_Praha 4_Jiná        |       0.0093 |
+| segment_Praha 1_Smíšená     |       0.0087 |
+| segment_Praha 9_Cihlová     |       0.0082 |
+| segment_Praha 8_Smíšená     |       0.0078 |
+| elevator                    |       0.0072 |
+| segment_Praha 5_Smíšená     |       0.0067 |
+| segment_Praha 6_Jiná        |       0.0067 |
+| segment_Praha 10_Jiná       |       0.0060 |
+| txt_parking                 |       0.0060 |
+| dist_hrad                   |       0.0058 |
+| segment_Praha 7_Jiná        |       0.0054 |
+| txt_bad_condition           |       0.0053 |
+| segment_Praha 6_Smíšená     |       0.0051 |
+| construction_Smíšená        |       0.0051 |
+| segment_Praha 4_Cihlová     |       0.0051 |
+| segment_Unknown_Smíšená     |       0.0049 |
+| txt_balcony                 |       0.0048 |
+| condition_Velmi dobrý       |       0.0047 |
+| txt_ac                      |       0.0046 |
+| segment_Praha 5_Cihlová     |       0.0046 |
+| txt_high_ceilings           |       0.0045 |
+
+ Kontrola finálního formátu (cena v Kč):
+|   id |       price |
+|-----:|------------:|
+| 8795 | 7.38912e+06 |
+| 6516 | 7.91714e+06 |
+| 4714 | 5.50944e+06 |
+| 8423 | 7.04079e+06 |
+| 5361 | 7.8005e+06  |
+
+Celkový počet predikcí: 1020
