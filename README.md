@@ -54,7 +54,7 @@ Python, XGBoost, LightGBM, CatBoost, Optuna, scikit-learn
 
 Projekt vznikl v rámci kurzu PřF:M7DataSP – Praktikum z pokročilé datové vědy (2025) na Masarykově univerzitě, na základě course repozitáře [simecek/dspracticum2024](https://github.com/simecek/dspracticum2024) a sdíleného týmového repozitáře [LuciaKajanova/dspracticum25_flowers_team](https://github.com/LuciaKajanova/dspracticum25_flowers_team).
 
-Oficiálně šlo o skupinové zadání (spolupráce s Lucia Kajanová a Eva Kopřiva), kompletní ML pipeline v tomto repozitáři je ale moje individuální práce.
+Oficiálně šlo o skupinové zadání (spolupráce s Lucia Kajanová a Eva Kopřivová), kompletní ML pipeline v tomto repozitáři je ale moje individuální práce.
 
 ## Licence
 
